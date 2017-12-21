@@ -1,8 +1,10 @@
 body {
 	color: grey;
 	max-width: 400px;
-	margin: 100px auto 20px auto;
+	min-width: 100px;
+	margin: 0 auto;
 	text-align: right;
+	padding: 100px 30px 0px 30px;
 }
 
 a {
