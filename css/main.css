@@ -1,0 +1,16 @@
+body {
+	color: grey;
+	max-width: 400px;
+	margin: 100px auto 20px auto;
+	text-align: right;
+}
+
+a {
+	text-decoration: none;
+	color: grey;
+}
+
+a:hover {
+	color: black;
+	text-shadow: 1px 1px 3px lightgrey;
+}
