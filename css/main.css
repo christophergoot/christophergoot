@@ -1,10 +1,17 @@
+
+html, body {
+	height: 100%;
+}
+
 body {
-	color: grey;
-	max-width: 400px;
-	min-width: 100px;
+	color: rgb(0, 0, 0);
+	/* max-width: 400px; */
+	min-width: 200px;
 	margin: 0 auto;
 	text-align: right;
-	padding: 100px 30px 0px 30px;
+	padding: 0 3em;
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -15,4 +22,49 @@ a {
 a:hover {
 	color: black;
 	text-shadow: 1px 1px 3px lightgrey;
+}
+
+header {
+	border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
+}
+
+header>ul {
+	list-style: none;
+}
+
+footer {
+	padding: 1em 0;
+	border-top: 1px rgba(0, 0, 0, 0.15) solid;
+	flex-shrink: 0;
+	margin-top: auto;
+}
+
+section {
+	margin-top: 2em;
+}
+
+.selected {
+	/* background-color: #545604; */
+	color: #D9DB87;
+	text-shadow: rgb(84, 86, 4) 2px 0px 0px, rgb(84, 86, 4) 1.75517px 0.958851px 0px, rgb(84, 86, 4) 1.0806px 1.68294px 0px, rgb(84, 86, 4) 0.141474px 1.99499px 0px, rgb(84, 86, 4) -0.832294px 1.81859px 0px, rgb(84, 86, 4) -1.60229px 1.19694px 0px, rgb(84, 86, 4) -1.97998px 0.28224px 0px, rgb(84, 86, 4) -1.87291px -0.701566px 0px, rgb(84, 86, 4) -1.30729px -1.5136px 0px, rgb(84, 86, 4) -0.421592px -1.95506px 0px, rgb(84, 86, 4) 0.567324px -1.91785px 0px, rgb(84, 86, 4) 1.41734px -1.41108px 0px, rgb(84, 86, 4) 1.92034px -0.558831px 0px;	
+}
+
+.hidden {
+	display: none;
+}
+
+.project {
+	border: 1px grey solid;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+.cover {
+	background-size: cover;
+	padding: 1em;
+}
+
+.cover>p, .cover>h3 {
+	background-color: rgba(255, 255, 255, 0.65);
+	padding: .5em;
 }
