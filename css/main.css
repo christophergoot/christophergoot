@@ -16,8 +16,7 @@ body {
 
 a {
 	text-decoration: none;
-	color: grey;
-}
+	color: rgb(84, 86, 4);}
 
 a:hover {
 	color: #545604;
@@ -97,16 +96,61 @@ section {
 
 .project {
 	/* border: 1px grey solid; */
-	/* padding: 1em; */
+	padding: 1em;
 	margin-bottom: 4em;
 }
 
+.project>a {
+	color: black;
+    position: relative;
+	top: 1.2em;
+	margin-left: .5em;
+}
+h2 {
+	margin: 0 0 .7em 0;
+}
 .cover {
 	background-size: cover;
 	padding: 1em;
+	/* margin: 1em; */
+	transition: all .2s ease-in-out;
+	/* height: 4em; */
+	/* overflow: hidden; */
 }
 
-.cover>p, .cover>h3 {
+.cover>h3 {
 	background-color: rgba(255, 255, 255, 0.65);
 	padding: .5em;
+}
+
+.extra {
+	background-color: rgba(255, 255, 255, 0.65);
+	padding: .5em;
+	/* font-size: 85%; */
+	/* transition: font-size .15s ease-in-out; */
+
+
+	/* height: 0%;
+	display: none;
+    overflow: hidden;
+	padding: 0;
+	transition: all .25s ease-in-out; */
+}
+
+.project:hover .extra {
+	/* font-size: 100%; */
+	/* transition: font-size .15s ease-in-out; */
+}
+
+ .project:hover .cover {
+	transform: scale(1.1);
+	/* height: 18em; */
+
+
+	/* height: 100%;
+	display: block;
+	transition: all .25s ease-in-out;
+	background-color: rgba(255, 255, 255, 0.65);
+	padding: .5em; */
+
 }

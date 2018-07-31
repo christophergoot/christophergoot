@@ -30,8 +30,8 @@ function loadProjects(projects) {
 			<h2>${proj.title}</h2>
 			<div class='cover' style='background-image:url(${proj.image})'>
 				<h3>${proj.subtitle}</h4>
-				<p>${proj.description}</p>
-				<p>${proj.technology}</p>
+				<p class='extra'>${proj.description}</p>
+				<p class='extra'>${proj.technology}</p>
 			</div>
 			<a href=${proj.liveapp}>LiveApp</a>
 			<a href=${proj.repo}>Repo</a>
