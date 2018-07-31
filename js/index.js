@@ -19,7 +19,7 @@ function loadBio(details) {
 	const { headline, bioArr } = details;
 	const headlineSpace = document.getElementById('headline');
 	const bioSpace = document.getElementById('bio');
-	headlineSpace.innerHTML = `<h3>${headline}</h3>`;
+	headlineSpace.innerHTML = `<span class='headline'>${headline}</span>`;
 	bioArr.forEach(p => bioSpace.innerHTML += `<p>${p}</p>`);
 }
 

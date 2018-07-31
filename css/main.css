@@ -9,7 +9,7 @@ body {
 	min-width: 200px;
 	margin: 0 auto;
 	text-align: right;
-	padding: 0 3em;
+	padding: 0 1em;
 	display: flex;
 	flex-direction: column;
 }
@@ -34,9 +34,11 @@ header>ul {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
 header>ul>li {
+	margin-left: .5em;
 	cursor: pointer;
 	height: 1.5em;
 	transition: all .1s;
@@ -67,6 +69,12 @@ section {
 	opacity: 1;
 	transition: opacity .5s;
 }
+
+#headline {
+	font-size: 120%;
+	margin-bottom: 2em;
+}
+
 #contact>p {
 	position: relative;
 	right: 5.2em;
@@ -88,9 +96,9 @@ section {
 }
 
 .project {
-	border: 1px grey solid;
-	padding: 1em;
-	margin: 1em 0;
+	/* border: 1px grey solid; */
+	/* padding: 1em; */
+	margin-bottom: 4em;
 }
 
 .cover {
