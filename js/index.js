@@ -29,7 +29,7 @@ function loadProjects(projects) {
 		`<div class='project'>
 			<h2 style='font-family:${proj.titleFont}'>${proj.title}</h2>
 			<div class='cover' style='background:url(http://christophergoot.com/${proj.image}) no-repeat center center'>
-				<div class='project-text' style='top:12em'>
+				<div class='project-text'>
 					<h3>${proj.subtitle}</h4>
 					<p class='extra'>${proj.description}</p>
 					<p class='extra'>${proj.technology}</p>
