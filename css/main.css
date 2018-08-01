@@ -4,6 +4,10 @@ html, body {
 }
 
 body {
+	/* font-family: 'Roboto', sans-serif; */
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.5em;
 	color: rgb(0, 0, 0);
 	max-width: 600px;
 	min-width: 200px;
@@ -16,11 +20,15 @@ body {
 
 a {
 	text-decoration: none;
-	color: rgb(84, 86, 4);}
+	border-bottom: rgb(255, 255, 255) 0em  solid;
+	transition: border-bottom .2s ease-in;
+}
 
 a:hover {
-	color: #545604;
-	text-shadow: rgb(217, 219, 135) 1px 0px 0px, rgb(217, 219, 135) 0.540302px 0.841471px 0px, rgb(217, 219, 135) -0.416147px 0.909297px 0px, rgb(217, 219, 135) -0.989992px 0.14112px 0px, rgb(217, 219, 135) -0.653644px -0.756802px 0px, rgb(217, 219, 135) 0.283662px -0.958924px 0px, rgb(217, 219, 135) 0.96017px -0.279415px 0px;
+	border-bottom: currentColor .1em solid;
+	transition: border-bottom .2s ease-out;
+	/* color: #545604; */
+	/* text-shadow: rgb(217, 219, 135) 1px 0px 0px, rgb(217, 219, 135) 0.540302px 0.841471px 0px, rgb(217, 219, 135) -0.416147px 0.909297px 0px, rgb(217, 219, 135) -0.989992px 0.14112px 0px, rgb(217, 219, 135) -0.653644px -0.756802px 0px, rgb(217, 219, 135) 0.283662px -0.958924px 0px, rgb(217, 219, 135) 0.96017px -0.279415px 0px; */
 }
 
 header {
@@ -48,7 +56,7 @@ header>ul>li {
 .selected {
 	/* background-color: #545604; */
 	/* height: 2em; */
-	transition: all .2s;
+	transition: all .35s;
 	font-size: 120%;
 	color: rgb(218, 219, 135);
 	text-shadow: rgb(84, 86, 4) 2px 0px 0px, rgb(84, 86, 4) 1.75517px 0.958851px 0px, rgb(84, 86, 4) 1.0806px 1.68294px 0px, rgb(84, 86, 4) 0.141474px 1.99499px 0px, rgb(84, 86, 4) -0.832294px 1.81859px 0px, rgb(84, 86, 4) -1.60229px 1.19694px 0px, rgb(84, 86, 4) -1.97998px 0.28224px 0px, rgb(84, 86, 4) -1.87291px -0.701566px 0px, rgb(84, 86, 4) -1.30729px -1.5136px 0px, rgb(84, 86, 4) -0.421592px -1.95506px 0px, rgb(84, 86, 4) 0.567324px -1.91785px 0px, rgb(84, 86, 4) 1.41734px -1.41108px 0px, rgb(84, 86, 4) 1.92034px -0.558831px 0px;	
@@ -76,7 +84,7 @@ section {
 
 #contact>p {
 	position: relative;
-	right: 5.2em;
+	right: 5.75em;
 	margin: .5em 0;
 }
 
@@ -86,6 +94,8 @@ section {
 
 #contact>p>a {
 	position: relative;
+	color: rgb(84, 86, 4);
+
 	/* right: 10em; */
 }
 
@@ -112,34 +122,38 @@ h2 {
 .cover {
 	background-size: cover;
 	padding: 1em;
+	min-height: 250px;
 	/* margin: 1em; */
 	transition: all .2s ease-in-out;
 	/* height: 4em; */
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 
-.cover>h3 {
-	background-color: rgba(255, 255, 255, 0.65);
+.project-text>h3, .extra {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: rgb(0, 0, 0);
 	padding: .5em;
+	transition: all .5s ease-in-out;
+
 }
 
-.extra {
-	background-color: rgba(255, 255, 255, 0.65);
-	padding: .5em;
-	/* font-size: 85%; */
-	/* transition: font-size .15s ease-in-out; */
-
-
-	/* height: 0%;
-	display: none;
-    overflow: hidden;
-	padding: 0;
-	transition: all .25s ease-in-out; */
+.project-text {
+	position: relative;
+	transition: top .35s ease-in-out;
+	/* top: -12.5em; */
 }
 
-.project:hover .extra {
+.project:hover .project-text>h3, .project:hover .extra {
+	background-color: rgba(0, 0, 0, 0.75);
+    color: rgb(217, 219, 135);
+	transition: all .5s ease-in-out;
+
+}
+
+.project:hover .project-text {
+	top: 1em !important;
 	/* font-size: 100%; */
-	/* transition: font-size .15s ease-in-out; */
+	transition: top .35s ease-in-out;
 }
 
  .project:hover .cover {
