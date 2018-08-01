@@ -35,8 +35,8 @@ function loadProjects(projects) {
 					<p class='extra'>${proj.technology}</p>
 				</div>
 			</div>
-			<a href=${proj.liveapp}>LiveApp</a>
-			<a href=${proj.repo}>Repo</a>
+			<a href=${proj.liveapp} target='_blank'>LiveApp</a>
+			<a href=${proj.repo} target='_blank'>Repo</a>
 		</div>`
 	));
 }
