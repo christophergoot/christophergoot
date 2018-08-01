@@ -27,8 +27,8 @@ function loadProjects(projects) {
 	const projectSpace = document.getElementById('projects');
 	projects.forEach(proj => projectSpace.innerHTML += (
 		`<div class='project'>
-			<h2>${proj.title}</h2>
-			<div class='cover' style='background-image:url(${proj.image})'>
+			<h2 style='font-family:${proj.titleFont}'>${proj.title}</h2>
+			<div class='cover' style='background-image:url('https://christophergoot.com/${proj.image}')'>
 				<h3>${proj.subtitle}</h4>
 				<p class='extra'>${proj.description}</p>
 				<p class='extra'>${proj.technology}</p>
@@ -70,6 +70,7 @@ function fetchProjects(url) {
 				liveapp: proj.gsx$liveapp.$t,
 				repo: proj.gsx$repo.$t,
 				technology: proj.gsx$technology.$t,
+				titleFont: proj.gsx$titlefont.$t,
 			}));
 			loadProjects(projects);
 		});	
