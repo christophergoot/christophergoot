@@ -28,7 +28,7 @@ function loadProjects(projects) {
 	projects.forEach(proj => projectSpace.innerHTML += (
 		`<div class='project'>
 			<h2 style='font-family:${proj.titleFont}'>${proj.title}</h2>
-			<div class='cover' style='background-image:url("http://christophergoot.com/${proj.image}")'>
+			<div class='cover' style='background:url(http://christophergoot.com/${proj.image}) no-repeat center center'>
 				<div class='project-text' style='top:12em'>
 					<h3>${proj.subtitle}</h4>
 					<p class='extra'>${proj.description}</p>

@@ -33,14 +33,14 @@ a:hover {
 
 header {
 	border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
-	min-height: 5em;
-	padding-top: 2em;
+	/* min-height: 5em; */
+	padding-top: .5em;
 }
 
 header>ul {
 	list-style: none;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
@@ -58,8 +58,9 @@ header>ul>li {
 	/* height: 2em; */
 	transition: all .35s;
 	font-size: 120%;
-	color: rgb(218, 219, 135);
-	text-shadow: rgb(84, 86, 4) 2px 0px 0px, rgb(84, 86, 4) 1.75517px 0.958851px 0px, rgb(84, 86, 4) 1.0806px 1.68294px 0px, rgb(84, 86, 4) 0.141474px 1.99499px 0px, rgb(84, 86, 4) -0.832294px 1.81859px 0px, rgb(84, 86, 4) -1.60229px 1.19694px 0px, rgb(84, 86, 4) -1.97998px 0.28224px 0px, rgb(84, 86, 4) -1.87291px -0.701566px 0px, rgb(84, 86, 4) -1.30729px -1.5136px 0px, rgb(84, 86, 4) -0.421592px -1.95506px 0px, rgb(84, 86, 4) 0.567324px -1.91785px 0px, rgb(84, 86, 4) 1.41734px -1.41108px 0px, rgb(84, 86, 4) 1.92034px -0.558831px 0px;	
+	font-weight: 1000;
+	/* color: rgb(218, 219, 135); */
+	/* text-shadow: rgb(84, 86, 4) 2px 0px 0px, rgb(84, 86, 4) 1.75517px 0.958851px 0px, rgb(84, 86, 4) 1.0806px 1.68294px 0px, rgb(84, 86, 4) 0.141474px 1.99499px 0px, rgb(84, 86, 4) -0.832294px 1.81859px 0px, rgb(84, 86, 4) -1.60229px 1.19694px 0px, rgb(84, 86, 4) -1.97998px 0.28224px 0px, rgb(84, 86, 4) -1.87291px -0.701566px 0px, rgb(84, 86, 4) -1.30729px -1.5136px 0px, rgb(84, 86, 4) -0.421592px -1.95506px 0px, rgb(84, 86, 4) 0.567324px -1.91785px 0px, rgb(84, 86, 4) 1.41734px -1.41108px 0px, rgb(84, 86, 4) 1.92034px -0.558831px 0px;	 */
 }
 
 
@@ -73,6 +74,7 @@ footer {
 
 section {
 	margin-top: 2em;
+	margin-bottom: 2em;
 	opacity: 1;
 	transition: opacity .5s;
 }
@@ -167,4 +169,14 @@ h2 {
 	background-color: rgba(255, 255, 255, 0.65);
 	padding: .5em; */
 
+}
+
+@media screen and (min-width: 500px) {
+	header>ul {
+		flex-direction: row;
+	}
+	header {
+		padding-top: 1em;
+		/* height: 5em; */
+	}
 }
