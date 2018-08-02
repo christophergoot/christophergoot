@@ -1,7 +1,7 @@
 # christophergoot.com
 Portfolio Page for Christopher Gutierrez
 
-[Live App](https://christophergoot.com)
+[Live App](http://christophergoot.com)
 
 
 ## Technology
