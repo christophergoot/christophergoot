@@ -1,7 +1,10 @@
 
 html, body {
 	height: 100%;
-	background-color: rgb(252, 253, 245);
+}
+
+html {
+	/* background-image: url(../media/mountains-and-trees.svg); */
 }
 
 body {
@@ -16,6 +19,11 @@ body {
 	padding: 0 1em;
 	display: flex;
 	flex-direction: column;
+	background-color: rgb(252, 253, 245);
+	background-image: url(../media/mountains-and-trees.svg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-attachment: fixed;
 }
 
 a {
@@ -125,7 +133,7 @@ h2 {
 }
 
 .project-text>h3, .extra {
-    background-color: rgba(255, 255, 255, 0.75);
+	background-color: rgb(252, 253, 245, .85);
     color: rgb(0, 0, 0);
 	padding: .5em;
 	transition: all .5s ease-in-out;
