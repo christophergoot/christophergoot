@@ -130,6 +130,10 @@ h2 {
 	min-height: 250px;
 	transition: all .2s ease-in-out;
 	overflow: hidden;
+	background-size: 100% !important;
+    -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5)
 }
 
 .project-text>h3, .extra {
@@ -157,7 +161,11 @@ h2 {
 }
 
  .project:hover .cover {
-	transform: scale(1.1);
+	/* transform: scale(1.1); */
+    background-size: 110% !important;
+    -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
 }
 
 
