@@ -106,6 +106,9 @@ h2 {
 	margin: 0 0 .25em 0;
     font-size: 9vw;
 	line-height: 8vw;
+	color: black;
+	transition: all .5s ease-in-out;
+	text-shadow: none;
 }
 
 .tech-icon {
@@ -125,11 +128,6 @@ h2 {
 	color: rgb(84, 86, 4);
 	margin-left: .5em;
 }
-/* 
-.tech-stack {
-    display: flex;
-    justify-content: space-evenly;
-} */
 
 .tech-stack-icon {
 	display: inline-flex;
@@ -198,6 +196,10 @@ h2 {
 	box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
 }
 
+.project:hover h2 {
+	color: rgb(217, 219, 135);
+	text-shadow:  1px 1px 2px #4f6457, -1px -1px 0 #4f6457, 1px -1px 0 #4f6457, -1px 1px 0 #4f6457;
+}
 
 @media screen and (min-width: 350px) {
 	.project-text {
