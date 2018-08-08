@@ -3,10 +3,6 @@ html, body {
 	height: 100%;
 }
 
-html {
-	/* background-image: url(../media/mountains-and-trees.svg); */
-}
-
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
@@ -38,8 +34,9 @@ a:hover {
 }
 
 header {
+	font-size: 1.25em;
 	border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
-	padding-top: .5em;
+	padding-top: .25em;
 }
 
 header>ul {
@@ -121,48 +118,59 @@ section {
 }
 
 h2 {
-	margin: 0 0 .7em 0;
+	margin: 0 0 .25em 0;
+    font-size: 9vw;
+	line-height: 8vw;
 }
 
 .cover {
 	background-size: cover;
-	padding: 1em;
-	min-height: 250px;
-	transition: all .2s ease-in-out;
-	overflow: hidden;
-	background-size: 100% !important;
+    /* border: green 1px solid; */
+    padding: 1em;
+    min-height: 250px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    /* background-size: 100% !important; */
+    background-size: 75vh 75vh !important;
     -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5)
+    box-shadow: inset 0px 0px 0px 0p
 }
 
-.project-text>h3, .extra {
+.project-text>h3, .details {
 	background-color: rgb(252, 253, 245, .85);
     color: rgb(0, 0, 0);
 	padding: .5em;
 	transition: all .5s ease-in-out;
+	border: 1px solid;
 }
 
 .project-text {
 	position: relative;
 	transition: top .35s ease-in-out;
-	top: 20em;
+	top: 0;
+	top: 50vh;
 }
 
-.project:hover .project-text>h3, .project:hover .extra {
+.details {
+	height: 45vh;
+}
+
+.project:hover .project-text>h3, .project:hover .details {
 	background-color: rgba(0, 0, 0, 0.75);
     color: rgb(217, 219, 135);
 	transition: all .5s ease-in-out;
 }
 
 .project:hover .project-text {
-	top: 1em !important;
+	top: 0 !important;
 	transition: top .35s ease-in-out;
 }
 
  .project:hover .cover {
 	/* transform: scale(1.1); */
-    background-size: 110% !important;
+    background-size: 70vh 70vh !important;
+    /* background-size: 110% !important; */
     -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
 	box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
@@ -171,23 +179,30 @@ h2 {
 
 @media screen and (min-width: 350px) {
 	.project-text {
-		top:18em;
+		top: 45vh;
+	}
+	.details {
+		height: 40vh;
 	}
 }
 
-
 @media screen and (min-width: 375px) {
 	.project-text {
-		top:17em;
+		top: 40vh;
+	}
+	.details {
+		height: 35vh;
 	}
 }
 
 @media screen and (min-width: 425px) {
 	.project-text {
-		top:15em;
+		top: 35vh;
+	}
+	.details {
+		height: 30vh;
 	}
 }
-
 @media screen and (min-width: 500px) {
 	header>ul {
 		flex-direction: row;
@@ -196,13 +211,23 @@ h2 {
 		padding-top: 1em;
 		/* height: 5em; */
 	}
+	h2 {
+		font-size: 45px;
+		line-height: 40px;
+	}
 	.project-text {
-		top:13em;
+		top: 30vh;
+	}
+	.details {
+		height: 25vh;
 	}
 }
 
 @media screen and (min-width: 600px) {
 	.project-text {
-		top:12em;
+		top: 40vh;
+	}
+	.details {
+		height: 35vh;
 	}
 }

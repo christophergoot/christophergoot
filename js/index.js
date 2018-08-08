@@ -31,8 +31,10 @@ function loadProjects(projects) {
 			<div class='cover' style='background:url(http://christophergoot.com/${proj.image}) no-repeat center center'>
 				<div class='project-text'>
 					<h3>${proj.subtitle}</h4>
-					<p class='extra'>${proj.description}</p>
-					<p class='extra'>${proj.technology}</p>
+					<div class='details'>
+						<p>${proj.description}</p>
+						<p>${proj.technology}</p>
+					</div>	
 				</div>
 			</div>
 			<a href=${proj.liveapp} target='_blank'>LiveApp</a>
