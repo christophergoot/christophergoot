@@ -60,7 +60,7 @@ function generateTechIcons(strList) {
 					</svg>
 				</div>`;
 				break;
-			case 'MongoDB':
+			case 'mongoDB':
 				markup += 
 				`<div title='${str.trim()}' class='tech-stack-icon'>
 					<svg viewBox="0 0 128 128">
@@ -92,6 +92,25 @@ function generateTechIcons(strList) {
 					</svg>
 				</div>`;
 				break;
+				case 'JSON Web Tokens':
+				markup +=
+				`<div title='${str.trim()}' class='tech-stack-icon'>
+					<svg viewBox="0 0 128 128">
+					<path d="M57.5,26.9 L57.5,2.84217094e-14 L42.5,2.84217094e-14 L42.5,26.9 L50,37.2 L57.5,26.9 Z" fill="${fillColor}"></path>
+					<path d="M42.5,73.1 L42.5,100 L57.5,100 L57.5,73.1 L50,62.8 L42.5,73.1 Z" fill="${fillColor}"></path>
+					<path d="M57.5,73.1 L73.3,94.9 L85.5,86 L69.6,64.3 L57.5,60.3 L57.5,73.1 Z" fill="${fillColor}"></path>
+					<path d="M42.5,26.9 L26.7,5.1 L14.5,14 L30.4,35.7 L42.5,39.7 L42.5,26.9 Z" fill="${fillColor}"></path>
+					<path d="M30.4,35.7 L4.8,27.4 L0.1,41.7 L25.7,50 L37.9,46.1 L30.4,35.7 Z" fill="${fillColor}"></path>
+					<path d="M62.1,53.9 L69.6,64.3 L95.2,72.6 L99.9,58.3 L74.3,50 L62.1,53.9 Z" fill="${fillColor}"></path>
+					<path d="M74.3,50 L99.9,41.7 L95.2,27.4 L69.6,35.7 L62.1,46.1 L74.3,50 Z" fill="${fillColor}"></path>
+					<path d="M25.7,50 L0.1,58.3 L4.8,72.6 L30.4,64.3 L37.9,53.9 L25.7,50 Z" fill="${fillColor}"></path>
+					<path d="M30.4,64.3 L14.5,86 L26.7,94.9 L42.5,73.1 L42.5,60.3 L30.4,64.3 Z" fill="${fillColor}"></path>
+					<path d="M69.6,35.7 L85.5,14 L73.3,5.1 L57.5,26.9 L57.5,39.7 L69.6,35.7 Z" fill="${fillColor}"></path>
+				</svg>
+				</div>`;
+				break;
+
+
 
 
 
