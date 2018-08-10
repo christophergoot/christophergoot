@@ -110,10 +110,6 @@ function generateTechIcons(strList) {
 				</div>`;
 				break;
 
-
-
-
-
 				default:
 				markup += 
 					`<div title='${str.trim()}' class='tech-stack-icon'>
@@ -136,6 +132,17 @@ function loadProjects(projects) {
 						<p>${proj.description}</p>
 						${generateTechIcons(proj.technology)}
 					</div>	
+				</div>
+			</div>
+			<div class='story-wrapper'>
+				<div class='story box'>
+					<p>${proj.story}</p>
+					<p>${proj.market}</p>
+					<p>${proj.lessons}</p>
+					<p>${proj.useCases}</p>
+				</div>
+				<div class='story tab'>
+					The Story
 				</div>
 			</div>
 			<a href=${proj.liveapp} target='_blank'>LiveApp</a>
@@ -175,6 +182,11 @@ function fetchProjects(url) {
 				repo: proj.gsx$repo.$t,
 				technology: proj.gsx$technology.$t,
 				titleFont: proj.gsx$titlefont.$t,
+				story: proj.gsx$story.$t,
+				market: proj.gsx$market.$t,
+				lessons: proj.gsx$lessons.$t,
+				useCases: proj.gsx$usecases.$t,
+
 			}));
 			loadProjects(projects);
 		});	
