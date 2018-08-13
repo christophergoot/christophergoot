@@ -120,6 +120,22 @@ function generateTechIcons(strList) {
 	return '<p class="tech-stack">'+markup+'</p>';
 }
 
+function generateUseCases(strList) {
+	if (strList === '') return '';
+	let useCases = '';
+	strList.split('%').forEach(el => useCases += `<li>${el.trim()}</li>`);
+	return `<ul class='use-cases'>${useCases}</ul>`;
+}
+
+function toggleStory(event) {
+	event.preventDefault();
+	// const storyBox = event.target.parentElement.childNodes[1];
+	const storyWrapper = event.target.parentElement;
+	// storyBox.classList.toggle('open');
+	storyWrapper.classList.toggle('open');
+	storyWrapper.childNodes[1].classList.toggle('open');
+}
+
 function loadProjects(projects) {
 	const projectSpace = document.getElementById('projects');
 	projects.forEach(proj => projectSpace.innerHTML += (
@@ -134,12 +150,14 @@ function loadProjects(projects) {
 					</div>	
 				</div>
 			</div>
-			<div class='story-wrapper'>
+			<div 
+				onClick='toggleStory(event)'
+				class='story-wrapper'>
 				<div class='story box'>
 					<p>${proj.story}</p>
 					<p>${proj.market}</p>
+					<p>${generateUseCases(proj.useCases)}</p>
 					<p>${proj.lessons}</p>
-					<p>${proj.useCases}</p>
 				</div>
 				<div class='story tab'>
 					The Story
@@ -170,7 +188,7 @@ function fetchProjects(url) {
 		.then(res => res.text())
 		.then(text => {
 			const string = text.split('x(')[1].split(')')[0];
-			return JSON.parse(string)
+			return JSON.parse(string);
 		})
 		.then(json => {
 			const projects = json.feed.entry.map(proj => ({

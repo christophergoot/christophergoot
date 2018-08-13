@@ -15,7 +15,7 @@ body {
 	padding: 0 1em;
 	display: flex;
 	flex-direction: column;
-	background-color: rgb(252, 253, 245);
+	background-color: #fcfdf5;
 	background-image: url(../media/mountains-and-trees.svg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
@@ -51,7 +51,7 @@ header>ul>li {
 	cursor: pointer;
 	height: 1.5em;
 	transition: all .1s;
-	color: rgb(84, 86, 4);
+	color: #545604;
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
 }
 
@@ -98,7 +98,7 @@ section {
 .project>a {
 	color: black;
     position: relative;
-	top: .5em;
+	top: 1em;
 	margin-left: .5em;
 }
 
@@ -124,6 +124,10 @@ h2 {
 	/* border-bottom: 	rgba(85, 86, 4, 0.726) .1em solid; */
 }
 
+ul.use-cases {
+	text-align: left;
+}
+
 #contact>a {
 	color: rgb(84, 86, 4);
 	margin-left: .5em;
@@ -144,6 +148,7 @@ h2 {
 	transform: rotate(-90deg);
 }
 .cover {
+	position: relative;
 	z-index: 10;
 	background-color: #000000;
 	background-size: cover;
@@ -184,17 +189,14 @@ h2 {
 	transition: all .5s ease-in-out;
 }
 .story-wrapper {
-	/* height: 17em; */
+	text-align: left;
 	margin: 0 1em;
 	box-shadow: inset 0px 30px 8px -26px rgba(0,0,0,0.5);
 	margin-top: -4em;
-	/* z-index: -100; */
+	position: relative;
+	z-index: 8;
 	overflow: hidden;
 	transition: margin-top .5s ease-in-out;
-}
-
-.project:hover .story-wrapper {
-	margin-top: 0;
 }
 
 
@@ -209,14 +211,18 @@ h2 {
 }
 
 .story.tab {
-    margin: -1px 0 0 auto;
+	position: relative;
+	z-index: 9;
+    margin: -2px 0 0 auto;
     width: max-content;
     border-bottom-right-radius: .25em;
     border-bottom-left-radius: .25em;
 	border-top: 0;
+	cursor: pointer;
 }
 
 .story.box {
+	padding: .5em 1em;
     border-top: 0;
 	max-height: 0;
 	font-size: .85em;
@@ -224,11 +230,19 @@ h2 {
     -webkit-box-shadow: inset 0px 30px 7px -23px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 30px 7px -23px rgba(0,0,0,0.5);
     box-shadow: inset 0px 30px 7px -23px rgba(0,0,0,0.5);
-    border-bottom-left-radius: .25em;
+	border-bottom-left-radius: .25em;
+	/* text-align: left;
+    padding: 0 1em; */
 	transition: all .5s ease-in-out;
 }
-.story-wrapper:hover .story.box {
-	max-height: 100em;
+
+.project:hover .story-wrapper, .story-wrapper.open {
+	margin-top: 0;
+	/* max-height: 5em; */
+}
+
+.story.box.open {
+	max-height: 100em !important;
 }
 
 .project:hover .project-text {
