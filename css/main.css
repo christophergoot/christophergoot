@@ -38,9 +38,11 @@ header {
     padding-top: 0;
     position: fixed;
     top: 0;
-    width: 100%;
-    max-width: 600px;
-    margin-right: .5em;
+    /* width: 100%; */
+    left: 0;
+    right: 0;
+    /* max-width: 600px; */
+    /* margin-right: .5em; */
     z-index: 20;
     background-color: #fcfdf5;
 }
@@ -71,7 +73,7 @@ header>ul>li {
 }
 
 footer {
-	padding: 1em 0;
+	padding: 1em;
 	border-top: 1px rgba(0, 0, 0, 0.15) solid;
 	color: rgb(84, 86, 4);
 	flex-shrink: 0;
@@ -85,7 +87,7 @@ section {
     position: static;
 }
 
-#contact, #about {
+#contact {
 	min-height: calc(100vh - 9em);}
 
 #contact {
@@ -94,6 +96,13 @@ section {
 
 #about {
 	text-align: justify;
+}
+
+#about>img {
+    width: 50vw;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
 }
 
 #headline {
