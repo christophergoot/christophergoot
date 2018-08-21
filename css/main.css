@@ -33,16 +33,16 @@ a:hover {
 }
 
 header {
-	font-size: 1.25em;
-	border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
-	padding-top: 0;
-	position: fixed;
-	top: 0;
-    width: 100vw;
+    font-size: 1.25em;
+    border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
+    padding-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
     max-width: 600px;
     margin-right: .5em;
-	z-index: 20;
-	background-color: #fcfdf5;
+    z-index: 20;
+    background-color: #fcfdf5;
 }
 
 header>ul {
@@ -53,7 +53,7 @@ header>ul {
 	justify-content: space-evenly;
 }
 header>ul>li {
-	margin-left: .5em;
+	margin-right: 1em;
 	cursor: pointer;
 	height: 1.5em;
 	transition: all .1s;
