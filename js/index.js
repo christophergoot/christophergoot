@@ -4,7 +4,7 @@ function race(event, sec) {
 		.forEach(sec => sec.classList.remove('selected'));
 	document.getElementById(`nav-${sec}`).classList.add('selected');
 	const sectionEl = document.getElementById(sec);
-	sectionEl.scrollIntoView({behavior: 'smooth', inline: 'start'});
+	sectionEl.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 
 function updateFooterYear() {
@@ -139,6 +139,8 @@ function loadProjects(projects) {
 	projects.forEach(proj => projectSpace.innerHTML += (
 		`<div class='project'>
 			<h2 style='font-family:${proj.titleFont}'>${proj.title}</h2>
+			<a href=${proj.liveapp} target='_blank'>LiveApp</a>
+			<a href=${proj.repo} target='_blank'>Repo</a>
 			<div class='cover' style='background:url(http://christophergoot.com/${proj.image}) no-repeat center center'>
 				<div class='project-text'>
 					<h3>${proj.subtitle}</h4>
@@ -161,8 +163,6 @@ function loadProjects(projects) {
 					The Story
 				</div>
 			</div>
-			<a href=${proj.liveapp} target='_blank'>LiveApp</a>
-			<a href=${proj.repo} target='_blank'>Repo</a>
 		</div>`
 	));
 }
