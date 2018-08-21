@@ -78,6 +78,11 @@ section {
 	margin-bottom: 2em;
 	opacity: 1;
 	transition: opacity .5s;
+	min-height: 85vh;
+}
+
+section:nth-of-type(even) {
+	background-color: gray;
 }
 
 #headline {
@@ -165,6 +170,19 @@ ul.use-cases {
     box-shadow: inset 0px 0px 0px 0p
 }
 
+.cover-scroll {
+	transition: all .2s ease-in-out;
+    background-size: 70vh 70vh !important;
+    -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
+}
+
+.h2-scroll {
+	color: rgb(217, 219, 135);
+	text-shadow:  1px 1px 2px #4f6457, -1px -1px 0 #4f6457, 1px -1px 0 #4f6457, -1px 1px 0 #4f6457;
+}
+
 .project-text>h3, .details {
 	background-color: rgb(252, 253, 245, .85);
     color: rgb(0, 0, 0);
@@ -246,23 +264,9 @@ ul.use-cases {
 	max-height: 100em !important;
 }
 
-.project:hover .project-text {
+.project-text-scroll {
 	top: 0 !important;
 	transition: top .35s ease-in-out;
-}
-
- .project:hover .cover {
-	/* transform: scale(1.1); */
-    background-size: 70vh 70vh !important;
-    /* background-size: 110% !important; */
-    -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
-	box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
-}
-
-.project:hover h2 {
-	color: rgb(217, 219, 135);
-	text-shadow:  1px 1px 2px #4f6457, -1px -1px 0 #4f6457, 1px -1px 0 #4f6457, -1px 1px 0 #4f6457;
 }
 
 @media screen and (min-width: 350px) {

@@ -138,35 +138,84 @@ function toggleStory(event) {
 
 function loadProjects(projects) {
 	const projectSpace = document.getElementById('projects');
-	projects.forEach(proj => projectSpace.innerHTML += (
-		`<div class='project'>
-			<h2 style='font-family:${proj.titleFont}'>${proj.title}</h2>
-			<div class='cover' style='background:url(http://christophergoot.com/${proj.image}) no-repeat center center'>
-				<div class='project-text'>
-					<h3>${proj.subtitle}</h4>
-					<div class='details'>
-						<p>${proj.description}</p>
-						${generateTechIcons(proj.technology)}
-					</div>	
-				</div>
+	projects.forEach((proj, i) => {
+		const container = document.getElementById(`trigger-${i}`);
+		const cover = document.getElementById(`cover-${i}`);
+		container.insertAdjacentHTML('afterbegin', `
+			<h2 style='font-family:${proj.titleFont}'>${proj.title}</h2>		
+		`);
+		cover.style = `background:url(http://christophergoot.com/${proj.image}) no-repeat center center`;
+		cover.innerHTML = `
+			<div id='project-text-${i}' class='project-text'>
+				<h3>${proj.subtitle}</h4>
+				<div class='details'>
+					<p>${proj.description}</p>
+					${generateTechIcons(proj.technology)}
+				</div>	
 			</div>
+		`;
+		container.insertAdjacentHTML('beforeend', `
 			<div 
-				onClick='toggleStory(event)'
-				class='story-wrapper'>
-				<div class='story box'>
-					<p>${proj.story}</p>
-					<p>${proj.market}</p>
-					<p>${generateUseCases(proj.useCases)}</p>
-					<p>${proj.lessons}</p>
-				</div>
-				<div class='story tab'>
-					The Story
-				</div>
+			onClick='toggleStory(event)'
+			class='story-wrapper'>
+			<div class='story box'>
+				<p>${proj.story}</p>
+				<p>${proj.market}</p>
+				<p>${generateUseCases(proj.useCases)}</p>
+				<p>${proj.lessons}</p>
+			</div>
+			<div class='story tab'>
+				The Story
 			</div>
 			<a href=${proj.liveapp} target='_blank'>LiveApp</a>
 			<a href=${proj.repo} target='_blank'>Repo</a>
-		</div>`
-	));
+			
+		`);
+
+
+		// document.getElementsByTagName('main')[0].insertAdjacentHTML('beforeend', `
+		// <script>
+		// 	// build scene
+		// 	var coverElem${i} = document.getElementById("cover-${i}");
+		// 	var detailElem${i} = document.getElementById("project-text-${i}");
+		// 	var scene = new ScrollMagic.Scene({triggerElement: "#trigger-${i}", duration: 600})
+		// 					.on("enter", function () {
+		// 						// trigger animation by changing inline style.
+		// 						coverElem${i}.classList.toggle('cover-scroll');
+		// 						detailElem${i}.classList.toggle('project-text-scroll');
+		// 						coverElem${i}.style.border = '3px solid green';
+		// 					})
+		// 					.on("leave", function () {
+		// 						// reset style
+		// 						coverElem${i}.classList.toggle('cover-scroll');
+		// 						coverElem${i}.style.border = "";
+		// 					})
+		// 					.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+		// 					.addTo(controller);
+		// </script>			
+		// `);
+	});
+	const projectEls = document.getElementsByClassName('project');
+	for (let project in projectEls) {
+		var myScene = new ScrollMagic.Scene({triggerElement: this, duration: 600})
+			// .on("enter", function () {
+			// 	// trigger animation by changing inline style.
+			// 	coverElem${i}.classList.toggle('cover-scroll');
+			// 	detailElem${i}.classList.toggle('project-text-scroll');
+			// 	coverElem${i}.style.border = '3px solid green';
+			// })
+			// .on("leave", function () {
+			// 	// reset style
+			// 	coverElem${i}.classList.toggle('cover-scroll');
+			// 	coverElem${i}.style.border = "";
+			// })
+			.setClassToggle(this, 'project-scroll')
+			.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+			.addTo(controller);	
+	};
+
+
+	
 }
 
 function fetchBio(url) {
