@@ -1,12 +1,10 @@
-function show(sec) {
-
-	document.querySelectorAll(`section:not(#${sec})`)
-		.forEach(sec => sec.classList.add('hidden'));
-	document.getElementById(sec).classList.remove('hidden');
+function race(event, sec) {
+	event.preventDefault();
 	document.querySelectorAll(`ul.nav.menu>li:not(#nav-${sec})`)
 		.forEach(sec => sec.classList.remove('selected'));
-	// document.getElementsByTagName('li').classList.remove('selected');
 	document.getElementById(`nav-${sec}`).classList.add('selected');
+	const sectionEl = document.getElementById(sec);
+	sectionEl.scrollIntoView({behavior: 'smooth', inline: 'start'});
 }
 
 function updateFooterYear() {

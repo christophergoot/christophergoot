@@ -36,7 +36,12 @@ a:hover {
 header {
 	font-size: 1.25em;
 	border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
-	padding-top: .25em;
+	padding-top: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+	background-color: #fcfdf5;
 }
 
 header>ul {
@@ -74,10 +79,10 @@ footer {
 }
 
 section {
-	margin-top: 2em;
+	padding-top: 15em;
 	margin-bottom: 2em;
-	opacity: 1;
-	transition: opacity .5s;
+	min-height: 100vh;
+	position: static;
 }
 
 #headline {
@@ -294,10 +299,6 @@ ul.use-cases {
 @media screen and (min-width: 500px) {
 	header>ul {
 		flex-direction: row;
-	}
-	header {
-		padding-top: 1em;
-		/* height: 5em; */
 	}
 	h2 {
 		font-size: 45px;

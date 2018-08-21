@@ -11,7 +11,7 @@
 	</script>
 	<title>Christopher Gutierrez: Portfolio</title>
 	<meta name="description" content="Portfolio page for Christopher Gutierrez">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee|Lobster|Open+Sans|Roboto|Roboto+Condensed|Shrikhand">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -20,14 +20,14 @@
 <body>
 	<header>
 			<ul class='nav menu'>
-				<li id='nav-contact' class='selected'>
-					<a onClick='show("contact")'>Christopher Gutierrez</a>
+				<li id='nav-contact' class='selected' onClick='race(event,"contact")'>
+					<a >Christopher Gutierrez</a>
 				</li>
 				<li id='nav-projects'>
-					<a onClick='show("projects")'>Projects</a>
+					<a onClick='race(event,"projects")'>Projects</a>
 				</li>
 				<li id='nav-about'>
-					<a onClick='show("about")'>About</a>
+					<a onClick='race(event,"about")'>About</a>
 				</li>
 			</ul>
 	</header>
@@ -35,21 +35,21 @@
 		id='contact'>
 		<div id='headline'>Hello, I am a fullstack web developer, lifelong technologist, and lover of all the Pacific Northwest has to offer. I enjoy tabletop games (boardgames & pen-and-paper RPGs), bicycling, camping, food, beer, and above all else: I am a proud husband and father of two extraordinary children.</div>
 		<a title="Christopher's Github page" href="https://github.com/christophergoot/" target="_blank">
-			<img src='media/icons/github.svg' class='tech-icon'/>
+			<img src='media/icons/github.svg' alt="Christopher's Github page" class='tech-icon'/>
 		</a>
 		<a title="Christopher's Linkedin profile" href="https://www.linkedin.com/in/christophergoot" target="_blank">
-			<img src='media/icons/linkedin.svg' class='tech-icon'/>
+			<img src='media/icons/linkedin.svg' alt="Christopher's Linkedin profile" class='tech-icon'/>
 		</a>
-		<a href="mailto:christophergoot@gmail.com?Subject=Regarding%20your%20portfolio..." target="_blank">
-			<img src='media/icons/email.svg' class='tech-icon'/>
+		<a title="email Christopher" href="mailto:christophergoot@gmail.com?Subject=Regarding%20your%20portfolio..." target="_blank">
+			<img src='media/icons/email.svg' alt="email Christopher" class='tech-icon'/>
 		</a>
 	</section>
 	<section 
-		class='hidden'
 		id='projects'>
 	</section>
-	<section id='about' class='hidden'>
-			<div id='bio'></div>
+	<section 
+		id='about'>
+		<div id='bio'></div>
 	</section>
 	<script src="js/index.js"></script>
 	<footer id='footer'>&copy; Christopher Gutierrez</footer>
