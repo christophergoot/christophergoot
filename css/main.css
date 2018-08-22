@@ -38,6 +38,8 @@ header {
     position: fixed;
     top: 0;
 	max-height: 5.75em;
+	max-width: 600px;
+	margin: 0 auto;
     left: 0;
     right: 0;
     z-index: 20;
@@ -56,6 +58,7 @@ header>ul>li {
 	cursor: pointer;
 	height: 1.5em;
 	transition: all .1s;
+	font-family: 'Montserrat:400', sans-serif;
 	color: #545604;
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
 }
@@ -63,7 +66,7 @@ header>ul>li {
 h1 {
     margin: 0 0 2em 0;
     font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat:600', sans-serif;
     border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
     padding-bottom: .45em;
     text-align: right;
@@ -72,8 +75,8 @@ h1 {
 }
 
 .selected {
-	transition: all .35s;
-	font-weight: 1000;
+	/* transition: all .35s; */
+	/* font-weight: 1000; */
 }
 
 .selected>a {
@@ -90,7 +93,7 @@ footer {
 }
 
 section {
-    padding: 2em .5em 0 .5em;
+    padding: 1.5em .5em 0 .5em;
     margin-bottom: 2em;
     position: static;
 }
@@ -106,6 +109,8 @@ section {
 
 #about {
 	text-align: justify;
+	padding-bottom: 5em;
+	font-size: 1.1em;
 }
 
 #about>img {
