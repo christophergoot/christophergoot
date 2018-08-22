@@ -12,7 +12,6 @@ body {
 	min-width: 200px;
 	margin: 0 auto;
 	text-align: right;
-	/* padding: 0 1em; */
 	display: flex;
 	flex-direction: column;
 	background-color: #fcfdf5;
@@ -38,11 +37,9 @@ header {
     padding-top: 0;
     position: fixed;
     top: 0;
-    /* width: 100%; */
+	max-height: 5.75em;
     left: 0;
     right: 0;
-    /* max-width: 600px; */
-    /* margin-right: .5em; */
     z-index: 20;
     background-color: #fcfdf5;
 }
@@ -61,6 +58,17 @@ header>ul>li {
 	transition: all .1s;
 	color: #545604;
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
+}
+
+h1 {
+    margin: 0 0 2em 0;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
+    padding-bottom: .45em;
+    text-align: right;
+    color: #545604;
+ 
 }
 
 .selected {
@@ -82,13 +90,15 @@ footer {
 }
 
 section {
-    padding: 9em .5em 0 .5em;
+    padding: 2em .5em 0 .5em;
     margin-bottom: 2em;
     position: static;
 }
 
 #contact {
-	min-height: calc(100vh - 9em);}
+	min-height: calc(100vh - 9em);
+	padding-top: 9em;
+}
 
 #contact {
 	background: url(../media/mountains-and-trees.svg) no-repeat center bottom;
