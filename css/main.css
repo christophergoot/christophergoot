@@ -26,7 +26,7 @@ a {
 	transition: border-bottom .2s ease-in;
 }
 
-a:hover {
+.project a:hover {
 	border-bottom: currentColor .1em solid;
 	transition: border-bottom .2s ease-out;
 }
@@ -63,6 +63,10 @@ header>ul>li {
 	text-shadow: rgb(255, 255, 255) 0px 0px 0px;
 }
 
+/* .nav.menu>li>a:hover {
+	border-bottom: inherit;
+} */
+
 h1 {
     margin: 0 0 2em 0;
     font-weight: 800;
@@ -72,11 +76,6 @@ h1 {
     text-align: right;
     color: #545604;
  
-}
-
-.selected {
-	/* transition: all .35s; */
-	/* font-weight: 1000; */
 }
 
 .selected>a {

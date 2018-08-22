@@ -1,8 +1,6 @@
 function race(event, sec) {
 	event.preventDefault();
-	document.querySelectorAll(`ul.nav.menu>li:not(#nav-${sec})`)
-		.forEach(sec => sec.classList.remove('selected'));
-	document.getElementById(`nav-${sec}`).classList.add('selected');
+	// setNav(sec);
 	const sectionEl = document.getElementById(sec);
 	sectionEl.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
@@ -206,6 +204,23 @@ function fetchProjects(url) {
 			}));
 			loadProjects(projects);
 		});	
+}
+
+function setNav(sec) {
+	document.querySelectorAll(`ul.nav.menu>li:not(#nav-${sec})`)
+		.forEach(sec => sec.classList.remove('selected'));
+	document.getElementById(`nav-${sec}`).classList.add('selected');
+}
+
+window.onscroll = function () {
+	const contactTop = 0;
+	const projectsTop = document.getElementById('projects').offsetTop;
+	const aboutTop = document.getElementById('about').offsetTop;
+	const scrollTop = Math.round(window.scrollY) + 75;
+	const currentNav = document.querySelector('li.selected').id;
+	if ( scrollTop > contactTop && scrollTop < projectsTop && currentNav !== 'nav-contact') setNav('contact');
+	else if ( scrollTop > projectsTop && scrollTop < aboutTop && currentNav !== 'nav-projects') setNav('projects');
+	else if ( scrollTop > aboutTop && currentNav !== 'nav-about') setNav('about');	
 }
 
 window.onload = function () {
