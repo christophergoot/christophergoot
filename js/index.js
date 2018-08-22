@@ -119,7 +119,10 @@ function generateTechIcons(strList) {
 function generateUseCases(strList) {
 	if (strList === '') return '';
 	let useCases = '';
-	strList.split('%').forEach(el => useCases += `<li>${el.trim()}</li>`);
+	strList.split('%').forEach(el => {
+		if (el.trim().split('')[0] === '+') useCases += `<li class='bullet'>${el.slice(2).trim()}</li>`;
+		else useCases += `<li>${el.trim()}</li>`
+	});
 	return `<ul class='use-cases'>${useCases}</ul>`;
 }
 
@@ -130,6 +133,16 @@ function toggleStory(event) {
 	// storyBox.classList.toggle('open');
 	storyWrapper.classList.toggle('open');
 	storyWrapper.childNodes[1].classList.toggle('open');
+}
+
+function generateStory(body, title) {
+	if (body === '') return '';
+	else return (`
+		<div>
+			<h4>${title}</h4>
+			<p>${body}</p>
+		</div>
+	`);
 }
 
 function loadProjects(projects) {
@@ -152,10 +165,10 @@ function loadProjects(projects) {
 				onClick='toggleStory(event)'
 				class='story-wrapper'>
 				<div class='story box'>
-					<p>${proj.story}</p>
-					<p>${proj.market}</p>
-					<p>${generateUseCases(proj.useCases)}</p>
-					<p>${proj.lessons}</p>
+					${generateStory(proj.story, 'Ideation')}
+					${generateStory(proj.market, 'Market')}
+					${generateStory(generateUseCases(proj.useCases), 'Use Cases')}
+					${generateStory(proj.lessons, 'Reflection')}
 				</div>
 				<div class='story tab'>
 					The Story

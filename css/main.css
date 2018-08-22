@@ -77,6 +77,19 @@ h1 {
     color: #545604;
  
 }
+h4 {
+	margin: .25em 0 0 0;
+    padding: 0;
+    font-family: 'Montserrat:400', sans-serif;
+    color: #545604;
+	text-align: right;
+	border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
+}
+
+.story.box p {
+    margin: 0 0 .5em 0;
+    text-align: justify;
+}
 
 .selected>a {
 	border-bottom: 	rgba(85, 86, 4, 0.726) .1em solid;
@@ -166,8 +179,11 @@ h2 {
 ul.use-cases {
 	text-align: left;
 	list-style-type: none;
+	padding-left: 0;
 }
-
+li.bullet {
+    padding-left: 1.5em;
+}
 #contact>a {
 	color: rgb(84, 86, 4);
 	margin-left: .5em;
