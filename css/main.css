@@ -81,7 +81,8 @@ h4 {
 	margin: .25em 0 0 0;
     padding: 0;
     font-family: 'Montserrat:400', sans-serif;
-    color: #545604;
+	color: #545604;
+	font-weight: bold;
 	text-align: right;
 	border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
 }
@@ -166,14 +167,12 @@ h2 {
 .tech-icon {
 	width: 2em;
 	height: 2em;
-	/* filter: invert(.7); */
 	transition: filter .5s ease-in-out;
 	filter: opacity(.7);
 }
 
 .tech-icon:hover {
 	filter: brightness(100%);
-	/* border-bottom: 	rgba(85, 86, 4, 0.726) .1em solid; */
 }
 
 ul.use-cases {
@@ -221,7 +220,6 @@ li.bullet {
     min-height: 250px;
     transition: all .2s ease-in-out;
     overflow: hidden;
-    /* background-size: 100% !important; */
     background-size: 75vh 75vh !important;
     -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0.5);
@@ -246,9 +244,10 @@ li.bullet {
     color: rgb(217, 219, 135);
 	transition: all .5s ease-in-out;
 }
+
 .story-wrapper {
 	text-align: left;
-	margin: 0;
+	margin: 0 -1em;
 	box-shadow: inset 0px 30px 8px -26px rgba(0,0,0,0.5);
 	margin-top: -1em;
 	position: relative;
@@ -261,18 +260,18 @@ li.bullet {
 	margin-top: 0;
 } 
 
-
 .story {
     background-color: rgb(255, 255, 241);
-    /* color: rgb(217, 219, 135); */
     padding: .5em;
-    /* z-index: -1; */
     overflow: hidden;
     transition: all .5s ease-in-out;
     border: 1px solid;
 }
 
 .story.tab {
+	font-family: 'Montserrat:400', sans-serif;
+	color: #545604;
+	font-weight: bold;
 	position: relative;
 	z-index: 9;
     margin: -2px 0 0 auto;
@@ -287,14 +286,11 @@ li.bullet {
 	padding: .5em 1em;
     border-top: 0;
 	max-height: 0;
-	font-size: .85em;
-    line-height: 1.5em;
+	font-size: 1em;
     -webkit-box-shadow: inset 0px 30px 7px -23px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 24px 7px -23px rgba(0,0,0,0.5);
     box-shadow: inset 0px 24px 7px -23px rgba(0,0,0,0.5);
 	border-bottom-left-radius: .25em;
-	/* text-align: left;
-    padding: 0 1em; */
 	transition: all .5s ease-in-out;
 }
 
@@ -309,9 +305,7 @@ li.bullet {
 }
 
  .project:hover .cover {
-	/* transform: scale(1.1); */
     background-size: 80vh 80vh !important;
-    /* background-size: 110% !important; */
     -webkit-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
 	box-shadow: inset 0px 0px 5px 3px rgba(0,0,0,0.5);
