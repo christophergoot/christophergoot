@@ -144,7 +144,7 @@ section {
 }
 
 .project {
-	padding: 1em;
+	padding: .25em;
 	margin-bottom: 4em;
 }
 
@@ -215,9 +215,11 @@ li.bullet {
 	z-index: 10;
 	background-color: #000000;
 	background-size: cover;
-	margin: 0 -2em;
+	margin: 0;
     padding: 1em;
-    min-height: 250px;
+	min-height: 250px;
+	height: 400px;
+	border: 1px solid;
     transition: all .2s ease-in-out;
     overflow: hidden;
     background-size: 75vh 75vh !important;
@@ -231,11 +233,13 @@ li.bullet {
     color: rgb(0, 0, 0);
 	padding: .5em;
 	transition: all .5s ease-in-out;
-	border: 1px solid;
+	/* border: 1px solid; */
 }
 
 .project-text {
-	position: relative;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	transition: top .35s ease-in-out;
 }
 
@@ -247,7 +251,7 @@ li.bullet {
 
 .story-wrapper {
 	text-align: left;
-	margin: -1.1em -1em 0 -1em;
+	margin: -1.1em 0 0 0;
 	box-shadow: inset 0px 30px 8px -26px rgba(0,0,0,0.5);
 	position: relative;
 	z-index: 8;
@@ -273,7 +277,7 @@ li.bullet {
 	font-weight: bold;
 	position: relative;
 	z-index: 9;
-    margin: -2px 0 0 auto;
+    margin: -1px 0 0 auto;
     width: max-content;
     border-bottom-right-radius: .25em;
     border-bottom-left-radius: .25em;
@@ -296,11 +300,6 @@ li.bullet {
 
 .story.box.open {
 	max-height: 100em !important;
-}
-
-.project:hover .project-text {
-	top: 0 !important;
-	transition: top .35s ease-in-out;
 }
 
  .project:hover .cover {
